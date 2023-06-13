@@ -3,6 +3,6 @@ package multi
 import "fmt"
 
 func PrintDetails (a,b float64){
-	fmt.Println("A * B = ",a*b)
+	fmt.Println(a ,"*", b ,"=", a*b)
 
 }
