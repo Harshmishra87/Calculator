@@ -1,15 +1,17 @@
 package main
 
-import ("thisisatest/add"
-		"fmt"
-		"thisisatest/div"
-		"thisisatest/multi"
-		"thisisatest/sub"
+import (
+	"fmt"
+	"thisisatest/add"
+	"thisisatest/div"
+	"thisisatest/multi"
+	"thisisatest/sub"
 )
 
 func main(){
 	var a, b float64
 	var oper string
+	var result float64 = 0.0
 
 	fmt.Print("Enter the first number: ")
 	fmt.Scanln(&a)
@@ -22,16 +24,22 @@ func main(){
 
 	switch oper{
 	case "+":
-		add.PrintDetails(a,b)
+		result = add.PrintDetails(a,b)
+		fmt.Println(a, oper ,b ,"=",result)
 	case "/":
-		div.PrintDetails(a,b)
+		if b==0{
+			fmt.Println("Zero Division Error")
+		}else{
+		result = div.PrintDetails(a,b)
+		fmt.Println(a, oper ,b ,"=",result)
+		}
 	case "*":
-		multi.PrintDetails(a,b)
+		result = multi.PrintDetails(a,b)
+		fmt.Println(a, oper ,b ,"=",result)
 	case "-":
-		sub.PrintDetails(a,b)
-		
-
-
+		result = sub.PrintDetails(a,b)
+		fmt.Println(a, oper ,b ,"=",result)
 	}
+	
 
 }
