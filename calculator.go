@@ -27,12 +27,8 @@ func main(){
 		result = add.PrintDetails(a,b)
 		fmt.Println(a, oper ,b ,"=",result)
 	case "/":
-		if b==0{
-			fmt.Println("Zero Division Error")
-		}else{
 		result = div.PrintDetails(a,b)
 		fmt.Println(a, oper ,b ,"=",result)
-		}
 	case "*":
 		result = multi.PrintDetails(a,b)
 		fmt.Println(a, oper ,b ,"=",result)
